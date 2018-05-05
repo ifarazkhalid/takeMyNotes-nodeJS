@@ -1,0 +1,22 @@
+{
+  "name": "takemynotes-nodejs",
+  "version": "1.0.0",
+  "description": "**takeMyNotes** is an application made to take notes. I made this appliation to get familiar with node.js as I wanted to dive deep in it. I hope to complete this in 2-3 days while I learn node.js.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifarazkhalid/takeMyNotes-nodeJS.git"
+  },
+  "author": "Faraz Khalid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ifarazkhalid/takeMyNotes-nodeJS/issues"
+  },
+  "homepage": "https://github.com/ifarazkhalid/takeMyNotes-nodeJS#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
+}
