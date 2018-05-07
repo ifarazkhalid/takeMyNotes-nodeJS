@@ -5,5 +5,21 @@ console.log('Starting app.js')
 //Loading notes.js file.
 const fs = require('fs');
 const _ = require('lodash');
+const yargs = require('yargs');
 
 const notes = require('./notes.js');
+
+const argv = yargs.argv;
+var commandName = process.argv[2];
+
+if (commandName === 'add') {
+  notes.addNote(argv.title, argv.body);
+} else if (commandName === 'list') {
+  notes.getAll();
+} else if (commandName === 'read') {
+  notes.getNote(argv.title);
+} else if (commandName === 'remove') {
+  notes.removeNote(argv.title);
+} else {
+  console.log('Command entered was not recognized');
+}
