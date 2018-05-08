@@ -16,6 +16,12 @@ var saveNotes = (notes) => {
   fs.writeFileSync('notes-data.json', JSON.stringify(notes));
 };
 
+var logNote = (note) => {
+  console.log("----");
+  console.log(`Title: ${note.title}`);
+  console.log(`Body: ${note.body}`);
+}
+
 // DESCRIPTION OF ADDNOTE
 // Add note function that adds note in the array
 // notes array that has all the notes. note variable stores the single note sent by user.
@@ -45,8 +51,15 @@ var getAll = () => {
   console.log("Getting all notes.")
 };
 
-var getNote = () => {
-  console.log("LOLOL note");
+var getNote = (title) => {
+  // console.log("LOLOL note");
+
+  var notes = fetchNotes();
+  var filteredNotes = notes.filter((note) => {
+  return note.title === title;
+  });
+
+  return filteredNotes[0];
 };
 
 var removeNote = (title) => {
@@ -62,5 +75,6 @@ module.exports = {
   addNote,
   getAll,
   getNote,
-  removeNote
+  removeNote,
+  logNote
 };
