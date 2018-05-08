@@ -25,7 +25,10 @@ if (commandName === 'add') {
 }
 
 else if (commandName === 'list') {
-  notes.getAll();
+  var note = notes.getAll();
+  for (var i = 0; i < note.length; i++) {
+    notes.logNote(note[i]);
+  }
 }
 
 else if (commandName === 'read') {

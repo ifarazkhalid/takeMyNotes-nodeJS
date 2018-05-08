@@ -48,7 +48,8 @@ if (duplicateNotes.length === 0) {
 };
 
 var getAll = () => {
-  console.log("Getting all notes.")
+  // console.log("Getting all notes.")
+  return fetchNotes();
 };
 
 var getNote = (title) => {
